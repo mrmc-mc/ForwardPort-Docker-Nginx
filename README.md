@@ -27,3 +27,18 @@ server
 ### 3. then reload nginx:
 
 ``` nginx -s reload ```
+
+
+---
+### To reverse proxy non-http services, the config file is a bit different. Here is a simple example:
+
+```
+upstream my_service {
+    server my_existing_container:9000;
+}
+
+server {
+    listen 9000;
+    proxy_pass my_service;
+}
+```
