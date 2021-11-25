@@ -8,7 +8,7 @@ Forward port with nginx container to another container
 ``` rm /etc/nginx/conf.d/default.conf ```
 
 
-### 2. creat new config file:
+### 2. creat new config file ``` nano /etc/nginx/conf.d/my_conf.conf ``` then Add this lines:
 ```
 server
 {
